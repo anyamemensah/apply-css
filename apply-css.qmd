@@ -9,7 +9,7 @@ format: html
 
 ## A Quick Quarto Tip
 
-Quarto is pretty neat. A not-so-secret Quarto tip that doesn't get enough attention is embedding a `css` chunk in a rendered HTML document.
+Quarto is pretty neat. A not-so-secret Quarto tip that doesn't get enough attention is embedding a `CSS` code chunk in a rendered HTML document.
 
 ## Applying CSS to an inline span element
 
@@ -55,7 +55,7 @@ htmltools::span(class = "anotherFont",
 
 ## The CSS Code Chunk
 
-To embed a CSS code chunk in your Quarto HTML document, use three backticks, then enter `css` within curly brackets, and then end with three backticks.
+To embed a CSS code chunk in your Quarto HTML document, use three backticks, enter CSS within curly brackets, and on a new line, enter your CSS code. Close the code chunk with three backticks.
 
 Here is the CSS code chunk: 
   
