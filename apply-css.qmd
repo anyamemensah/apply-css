@@ -1,0 +1,76 @@
+---
+title: "Applying CSS to Span Elements in Quarto HTML Documents"
+author:
+  - name:
+      given: Ama
+      family: Nyame-Mensah, Ph.D.
+format: html
+---
+
+## A Quick Quarto Tip
+
+Quarto is pretty neat. A not-so-secret Quarto tip that doesn't get enough attention is embedding a `css` chunk in a rendered HTML document.
+
+## Applying CSS to an inline span element
+
+This is a sentence using Quarto's default paragraph font size and font family.  
+
+
+Create a `span` element using a sequence of bracketed inlines followed immediately by attributes.
+
+Here's an example using a class called `bigFont`:  
+  
+`[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 3.5em.]{.bigFont}`  
+  
+[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 3.5em.]{.bigFont}
+
+
+Here's another example using a new class called `anotherFont`:  
+  
+`[This text is wrapped in a span tag and is written in Montserrat font with a font size of 2em.]{.anotherFont}`  
+
+[This text is wrapped in a span tag and is written in Montserrat font with a font size of 2em.]{.anotherFont}
+
+  
+    
+## Applying CSS to a span element created within an R code chunk
+  
+You can also create a span element within an R code chunk using the `span` function from the [htmltools](https://rstudio.github.io/htmltools/index.html) package:
+
+```{r}
+
+#| echo: true
+  
+# load htmltools
+library(htmltools)
+
+## render first sentence using bigFont
+htmltools::span(class = "bigFont",
+               paste0("This sentence is styled using the bigFont class."))
+
+## render the second sentence using anotherFont
+htmltools::span(class = "anotherFont",
+               paste0("And here is another sentence styled using the anotherFont class."))
+```
+
+## The CSS Code Chunk
+
+To embed a CSS code chunk in your Quarto HTML document, use three backticks, then enter `css` within curly brackets, and then end with three backticks.
+
+Here is the CSS code chunk: 
+  
+```{css, echo = TRUE}
+/* styling for bigFont class */
+.bigFont {color:#404040;
+              font-size:2.75em;
+              font-family:Roboto;
+              font-weight:800;
+              line-height: 1.2;}
+
+/* styling for anotherFont class */              
+.anotherFont {color:#404040; 
+                  font-size:1.75em; 
+                  font-family:Montserrat;
+                  font-weight:400;
+                  line-height: 1.2;}
+```
