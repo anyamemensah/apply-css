@@ -20,16 +20,16 @@ Create a `span` element using a sequence of bracketed inlines followed immediate
 
 Here's an example using a class called `bigFont`:  
   
-`[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 3.5em.]{.bigFont}`  
+`[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 2.75em.]{.bigFont}`  
   
-[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 3.5em.]{.bigFont}
+[This sentence is wrapped in a span tag and is written in Roboto font with a font size of 2.75em.]{.bigFont}
 
 
 Here's another example using a new class called `anotherFont`:  
   
-`[This text is wrapped in a span tag and is written in Montserrat font with a font size of 2em.]{.anotherFont}`  
+`[This text is wrapped in a span tag and is written in Montserrat font with a font size of 1.75em.]{.anotherFont}`  
 
-[This text is wrapped in a span tag and is written in Montserrat font with a font size of 2em.]{.anotherFont}
+[This text is wrapped in a span tag and is written in Montserrat font with a font size of 1.75em.]{.anotherFont}
 
   
     
